@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { Category } from 'src/app/interfaces/category';
+import { CategoriesService } from 'src/app/services/categories.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  arrCategories: Category[] = [];
+  constructor(
+    private categoriesServices: CategoriesService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
+    this.arrCategories = this.categoriesServices.getAllCategories()
+  }
+
+  getFilterCategory($event: any){
+    this.router.navigateByUrl('/home?category=' + $event.target.value)
   }
 
 }

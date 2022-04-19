@@ -15,13 +15,13 @@ export class PostsService {
     return this.arrPosts
   }
 
-  agregarPost(pData: any){
+  addPost(pData: any){
     const newPosts = {id: this.id, ...pData}
     this.arrPosts.push(newPosts)
     this.id++;
   }
 
-  getPostsByCategoria(cat: number){
+  getPostsByCategory(cat: number){
     return this.arrPosts.filter(post => post.category === cat)
   }
 }

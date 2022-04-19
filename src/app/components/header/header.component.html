@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['/home']">Blog</a>
+    <a class="navbar-brand" [routerLink]="['/home']">MI BLOG DE VIAJES VIAJES</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,17 +9,13 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]="">Nuevo Post</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Filtrar por Categoria
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
       </ul>
+      <div class="ms-auto me-5">
+        <select class="form-select px-4 py-1" name="filterByCategory" id="filterByCategory" (change)="getFilterCategory($event)">
+          <option  value="">Destino</option>
+          <option *ngFor="let category of arrCategories" [value]="category.id">{{category.title}}</option>
+        </select>
+      </div>
     </div>
   </div>
 </nav>
