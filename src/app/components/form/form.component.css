@@ -1,0 +1,10 @@
+input.ng-touched.ng-valid{
+  border-bottom: 2px solid lightgreen;
+}
+input.ng-touched.ng-invalid{
+  border-bottom: 2px solid tomato;
+}
+.error{
+  color: tomato;
+  font-size: 12px;
+}
