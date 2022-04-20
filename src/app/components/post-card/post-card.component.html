@@ -3,6 +3,6 @@
   <div class="body">
     <h5 class="titulo">{{miPost.title}}</h5>
     <p class="descripcion">{{miPost.text}}</p>
-    <a [routerLink]="" class="btn btn-success">Mas Información</a>
+    <a [routerLink]="['/post', miPost.id]" class="btn btn-success">Mas Información</a>
   </div>
 </div>

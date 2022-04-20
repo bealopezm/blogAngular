@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   getFilterCategory($event: any){
-    this.router.navigateByUrl('/home?category=' + $event.target.value)
+   this.router.navigate(['/category', $event.target.value])
   }
 
 }
