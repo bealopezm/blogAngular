@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Category } from 'src/app/interfaces/category';
 import { CategoriesService } from 'src/app/services/categories.service';
 import { PostsService } from 'src/app/services/posts.service';
@@ -15,15 +16,30 @@ export class FormComponent implements OnInit {
   formulario: FormGroup;
   constructor(
     private categoriesServices: CategoriesService,
-    private postsServices: PostsService
+    private postsServices: PostsService,
+    private router: Router
   ) {
     this.formulario = new FormGroup({
-      title: new FormControl('',[]),
-      text: new FormControl('',[]),
-      author: new FormControl('',[]),
-      image: new FormControl('',[]),
-      date: new FormControl('',[]),
-      category: new FormControl('',[]),
+      title: new FormControl('',[
+        Validators.required,
+      ]),
+      text: new FormControl('',[
+        Validators.required,
+      ]),
+      author: new FormControl('',[
+        Validators.required,
+      ]),
+      image: new FormControl('',[
+        Validators.required,
+        Validators.pattern(/^[\https://]+[\w-\.]/)
+      ]),
+      date: new FormControl('',[
+        Validators.required,
+        Validators.pattern(/^\d{2}\/\d{2}\/\d{4}/)
+      ]),
+      category: new FormControl('',[
+        Validators.required
+      ]),
     })
    }
 
@@ -33,7 +49,15 @@ export class FormComponent implements OnInit {
   getDataForm(){
     console.log(this.formulario.value)
     this.postsServices.addPost(this.formulario.value)
- 
+    if(this.formulario.valid){
+      this.router.navigate(['/home'])
+    }
   }
-
+  chechControl(controlName: string,errorName: string): boolean{
+    if(this.formulario.get(controlName)?.hasError(errorName) && this.formulario.get(controlName)?.touched){
+      return true
+    }else{
+      return false
+    }
+  }
 }
