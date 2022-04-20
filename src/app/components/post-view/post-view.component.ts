@@ -18,7 +18,7 @@ export class PostViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params =>{
-      const id = parseInt(params['idPost'])
+      const id = params['idPost']
        const response = this.postsService.getById(id);
        this.post = response[0]
     })

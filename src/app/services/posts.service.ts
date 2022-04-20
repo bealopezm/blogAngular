@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { posts } from '../db/posts.db';
+import { UUID } from 'angular2-uuid';
 import { Post } from '../interfaces/post';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { Post } from '../interfaces/post';
 export class PostsService {
 
   private arrPosts: Post[] = posts;
-  private id: number = 7;
+  private id: string = UUID.UUID();
   constructor() {
     if(localStorage.getItem('Posts') === null){
       localStorage.setItem('Posts', JSON.stringify(this.arrPosts))
@@ -22,7 +23,6 @@ export class PostsService {
   addPost(pForm: any){
     const newPosts = {id: this.id,...pForm}
     this.arrPosts.push(newPosts)
-    this.id++;
     localStorage.setItem('Posts', JSON.stringify(this.arrPosts))
   }
 
@@ -30,7 +30,7 @@ export class PostsService {
     return this.arrPosts.filter(post => post.category === cat)
   }
 
-  getById(pId: number){
+  getById(pId: string){
     return this.arrPosts.filter(post => post.id === pId)
   }
 }
