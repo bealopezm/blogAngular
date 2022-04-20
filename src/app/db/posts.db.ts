@@ -44,7 +44,16 @@ export const posts: Post[] = [
   author: 'Maria Toledo',
   image: 'https://www.elplural.com/uploads/s1/27/23/36/camino-santiago.jpeg',
   date: '20/03/2022',
-  category: 3
+  category: 4
+ },
+ {
+  id: 6,
+  title: 'Camino a Santiago',
+  text: 'Malesuada ornare duis ullamcorper eros mi facilisis fusce sed eleifend dignissim erat pharetra, turpis netus nisl nibh primis auctor vestibulum fermentum dui varius himenaeos nisi, dapibus nec condimentum leo pretium quam sem venenatis augue posuere euismod. Bibendum felis semper turpis mollis rhoncus curae mus malesuada massa blandit eu libero, pretium cras risus nunc id porta at eleifend potenti torquent. Ad urna tincidunt id velit inceptos senectus, sagittis rhoncus in enim natoque, dictumst per elementum praesent tortor.',
+  author: 'Rodriguez Perez',
+  image: 'https://viajes.nationalgeographic.com.es/medio/2022/03/03/fallas_dc41e963_800x800.jpg',
+  date: '17/03/2018',
+  category: 5
  },
  
 ]

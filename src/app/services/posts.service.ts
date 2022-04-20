@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { posts } from '../db/posts.db';
-import { Category } from '../interfaces/category';
 import { Post } from '../interfaces/post';
 
 @Injectable({
@@ -9,7 +8,7 @@ import { Post } from '../interfaces/post';
 export class PostsService {
 
   private arrPosts: Post[] = posts;
-  private id: number = 6;
+  private id: number = 7;
   constructor() {
     if(localStorage.getItem('Posts') === null){
       localStorage.setItem('Posts', JSON.stringify(this.arrPosts))
