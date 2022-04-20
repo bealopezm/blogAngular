@@ -19,11 +19,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.arrPosts = this.postsService.getAllPosts()
 
-    this.activatedRoute.queryParams.subscribe(queryparams => {
-      const id = parseInt( queryparams['category'])
-      if(queryparams['category'] !== ''){
+    this.activatedRoute.params.subscribe(params => {
+      const id = parseInt( params['categoryId'])
+      if(params['categoryId']){
         this.arrPosts = this.postsService.getPostsByCategory(id)
-      }else if(queryparams['category'] === ''){
+      }else{
         this.arrPosts = this.postsService.getAllPosts()
       }
     })
