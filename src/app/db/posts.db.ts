@@ -28,4 +28,23 @@ export const posts: Post[] = [
   date: '02/08/2020',
   category: 3
  },
+ {
+  id: 4,
+  title: 'Un paseo por Madrid',
+  text: 'Lorem ipsum dolor sit amet. Vel dolorem soluta rem modi delectus et debitis vitae sit impedit natus aut sequi atque et consectetur animi vel fugiat deserunt. In harum sunt aut neque quae qui reprehenderit dolorum in quos quia ut repudiandae odit sed alias doloremque et odio pariatur.  Eos quia voluptas sed quisquam architecto quo dolorem dolores eos quaerat mollitia sit porro consequuntur est nihil labore ut saepe iste! Aut consequatur Quis est possimus repudiandae vel harum ea voluptas galisum. Qui sunt perspiciatis et quaerat numquam est fuga reprehenderit. Aut officia dignissimos non velit illum sed rerum quibusdam eos dolores adipisci non expedita incidunt.  Et quam voluptas sed dolore eveniet sit ipsam sapiente qui consectetur galisum et iure laudantium. 33 rerum magnam rem culpa similique et aliquam vero est quisquam nihil est repudiandae deleniti eos voluptatum possimus.',
+  author: 'Leo Porti',
+  image: 'https://cdn.turkishairlines.com/m/545cc5ece9d013af/original/Travel-Guide-of-Madrid-via-Turkish-Airlines.jpg',
+  date: '20/04/2022',
+  category: 3
+ },
+ {
+  id: 5,
+  title: 'Camino a Santiago',
+  text: 'Lorem ipsum dolor sit amet. Vel dolorem soluta rem modi delectus et debitis vitae sit impedit natus aut sequi atque et consectetur animi vel fugiat deserunt. In harum sunt aut neque quae qui reprehenderit dolorum in quos quia ut repudiandae odit sed alias doloremque et odio pariatur.  Eos quia voluptas sed quisquam architecto quo dolorem dolores eos quaerat mollitia sit porro consequuntur est nihil labore ut saepe iste! Aut consequatur Quis est possimus repudiandae vel harum ea voluptas galisum. Qui sunt perspiciatis et quaerat numquam est fuga reprehenderit. Aut officia dignissimos non velit illum sed rerum quibusdam eos dolores adipisci non expedita incidunt.  Et quam voluptas sed dolore eveniet sit ipsam sapiente qui consectetur galisum et iure laudantium. 33 rerum magnam rem culpa similique et aliquam vero est quisquam nihil est repudiandae deleniti eos voluptatum possimus.',
+  author: 'Maria Toledo',
+  image: 'https://www.elplural.com/uploads/s1/27/23/36/camino-santiago.jpeg',
+  date: '20/03/2022',
+  category: 3
+ },
+ 
 ]

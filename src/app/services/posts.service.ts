@@ -9,7 +9,7 @@ import { Post } from '../interfaces/post';
 export class PostsService {
 
   private arrPosts: Post[] = posts;
-  private id: number = 4;
+  private id: number = 6;
   constructor() {
     if(localStorage.getItem('Posts') === null){
       localStorage.setItem('Posts', JSON.stringify(this.arrPosts))
