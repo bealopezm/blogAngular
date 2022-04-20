@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { PostViewComponent } from './components/post-view/post-view.component';
 import { FormComponent } from './components/form/form.component';
+import { TrimStringPipe } from './pipes/trim-string.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormComponent } from './components/form/form.component';
     HeaderComponent,
     PostCardComponent,
     PostViewComponent,
-    FormComponent
+    FormComponent,
+    TrimStringPipe
   ],
   imports: [
     BrowserModule,
